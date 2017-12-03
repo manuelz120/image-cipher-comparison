@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
 
     private Dictionary<String, String> filenamesToFullPath = new Hashtable<>();
     private List<String> testfiles = new ArrayList<String>();
-    private String basePath = "/sdcard/Download/testimages/";
+    private String basePath = "/storage/emulated/0/Download";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -4,12 +4,11 @@ package at.fhjoanneum.platzerf.imageciphercomparison;
  * Created by platzerf on 20.10.2017.
  */
 
-import static android.os.Process.THREAD_PRIORITY_BACKGROUND;
-import static android.os.Process.THREAD_PRIORITY_FOREGROUND;
-import static android.os.Process.THREAD_PRIORITY_MORE_FAVORABLE;
-import android.os.Process;
 import android.os.AsyncTask;
+import android.os.Process;
 import android.os.SystemClock;
+
+import static android.os.Process.THREAD_PRIORITY_FOREGROUND;
 
 public class TestRunner extends AsyncTask<Integer, String, String> {
 

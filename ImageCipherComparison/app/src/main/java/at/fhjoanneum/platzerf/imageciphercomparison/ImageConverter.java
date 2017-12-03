@@ -4,6 +4,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
 
+import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
@@ -18,6 +19,10 @@ public class ImageConverter {
     // only for ARGB Config
     public ConvertedImage ConvertFromArgbImage(String path){
         ConvertedImage convImage = new ConvertedImage();
+
+        File file = new File(path);
+        System.out.println(file.exists());
+
         Bitmap image = BitmapFactory.decodeFile(path);
 
         convImage.Config = image.getConfig();
@@ -38,8 +43,14 @@ public class ImageConverter {
         }
 
         convImage.SumOfBytes = 0;
+        long prevSumOfBytes = 0;
         for(int i = 0; i < convImage.ImageBytes.length; i++){
+            prevSumOfBytes = convImage.SumOfBytes;
             convImage.SumOfBytes += convImage.ImageBytes[i];
+            if (prevSumOfBytes > convImage.SumOfBytes) {
+                System.out.println("TEST");
+            }
+
         }
 
         return convImage;

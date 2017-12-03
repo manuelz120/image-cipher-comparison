@@ -1,8 +1,5 @@
 package at.fhjoanneum.platzerf.imageciphercomparison;
 
-/**
- * Created by platzerf on 17.06.2017.
- */
 
 public class AesCCipher implements ImageCipher {
 

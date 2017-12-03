@@ -1,23 +1,9 @@
 package at.fhjoanneum.platzerf.imageciphercomparison;
 
-import java.security.AlgorithmParameters;
 import java.security.GeneralSecurityException;
-import java.security.NoSuchAlgorithmException;
-import java.security.NoSuchProviderException;
-import java.security.Policy;
-import java.security.Provider;
-import java.security.spec.KeySpec;
-import java.util.ArrayList;
-import java.util.Enumeration;
-import java.util.Objects;
 
 import javax.crypto.Cipher;
-import javax.crypto.NoSuchPaddingException;
 import javax.crypto.SecretKey;
-import javax.crypto.SecretKeyFactory;
-import javax.crypto.spec.IvParameterSpec;
-import javax.crypto.spec.PBEKeySpec;
-import javax.crypto.spec.PBEParameterSpec;
 import javax.crypto.spec.SecretKeySpec;
 
 /**

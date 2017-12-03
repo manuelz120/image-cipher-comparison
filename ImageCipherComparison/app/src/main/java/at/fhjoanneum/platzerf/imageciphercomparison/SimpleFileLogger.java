@@ -1,14 +1,12 @@
 package at.fhjoanneum.platzerf.imageciphercomparison;
 
 import android.content.Context;
-import android.os.Environment;
 import android.support.v4.content.ContextCompat;
 import android.util.Log;
 import android.widget.Toast;
 
 import java.io.File;
 import java.io.FileOutputStream;
-import java.io.FileWriter;
 import java.io.OutputStreamWriter;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;

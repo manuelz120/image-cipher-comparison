@@ -60,7 +60,7 @@ AlgorithmParameter generateInitialContitions(unsigned char key[KEY_SIZE]) {
 
     for(int i = 0; i < KEY_SIZE; i++) {
         r += convertM1((double)key[i]);
-        param.C = (param.C + key[i]) % 256;
+        param.C = (param.C + key[i]) % 256;     // TODO modulus can be done in the end?
     }
 
     param.X = r - floor(r);
@@ -100,7 +100,11 @@ void encrypt(AlgorithmParameter *params, unsigned char *imageBytes, int numberOf
         xn = x;
         logisticSum = 0.0;
         for(int i = 0; i < numberOfLogisticMapRepititions; i++) {
+            // THAT line is wrong????
             xn = LOGISTIC_R * xn * (1.0 - xn);
+
+            // TODO we need to calculate x_i again here?
+
             logisticSum += xn;
         }
 
